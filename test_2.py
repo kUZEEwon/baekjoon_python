@@ -26,25 +26,30 @@ def 함수명(매개변수):
 # 한수의 개수 구하기
 
 
-def hansu(num):
-    b1 = num/100
-    b2 = (num-(b1*100))/10
-    b3 = num%10
-    
+def Hansu(num):
+    b1 = int(num/100)
+    b2 = int((num-(b1*100))/10)
+    b3 = int(num%10)
+    #print(b1, b2, b3)
     if((b1 + b3)/2 == b2):
-        print("ok")
         return 1
     else: return 0
-n = int(input("1000이하의 자연수를 입력하세요="))
+n = int(input())
 cnt = 0
 
 if(n<100):
     print(n)
 elif(n<1000):
     for i in range(100, n+1):
-        ans = hansu(n)
-        if(hansu(n)==1): 
+        ans = Hansu(i)
+        if(ans==1): 
             cnt=cnt+1
-            print(cnt)
+    print(99+cnt)
+elif(n==1000):
+    n=999
+    for i in range(100, n+1):
+        ans = Hansu(i)
+        if(ans == 1):
+            cnt=cnt+1
     print(99+cnt)
         

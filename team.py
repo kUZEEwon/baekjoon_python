@@ -12,6 +12,6 @@ def print_sum():
     b= 200
     result=a+b
     print('print_sum() 내부 :',a,'과',b,'의 합은',result,'입니다')
-a=10
-b=20
+a=20
+b=30
 print_sum()
